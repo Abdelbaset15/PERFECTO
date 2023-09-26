@@ -1,0 +1,544 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    scroll-behavior: smooth;
+    
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--main-color);
+}
+
+:root{
+    --main-color:#bceaf0;
+    --nav-color:#EDA909;
+    --special-color:#73926C;
+    --special-color2:#cec28b;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+img{
+    border-radius: 5%;
+}
+
+img:hover{
+    cursor: pointer;
+    opacity: .7;
+    transform: scale(.9);
+}
+/*------------------------------------------------ */
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    border-bottom: solid ;
+    position: fixed;
+    z-index: 2;
+}
+
+nav h2{
+    position: relative;
+    left: 200%;
+    top: 200%;
+    transform: scale(5);
+    animation: zoom 1.5s forwards ;
+}
+
+@keyframes zoom{
+    from{transform: scale(5); left: 200%; top: 200%;}
+    to{transform: scale(1); left: 0%; top: 0%;}
+}
+
+.nav_parent{
+    display: flex;
+    justify-content: space-evenly;
+    width: inherit;
+    text-transform: capitalize;
+}
+
+
+.nav_parent div{
+    display: flex;
+    align-items: center;
+}
+
+.nav_parent div a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.nav_parent div a:hover{
+    color: var(--special-color2);
+}
+
+
+.nav_parent div:first-child{
+    width: 20%;
+    color: var(--special-color);
+    font-size: 25px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    background-image:url(extra/students_edited.jpg);
+    background-position: 60%;
+    text-transform: capitalize;
+    animation: main_anim 1s forwards ;
+}
+
+@keyframes main_anim{
+    from{height: 0%;}
+    to{height: 60%;}
+}
+
+main .title{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 80px ;
+    margin-bottom: 80px;
+    font-size: 20px;
+    animation: title_show 1.5s forwards;
+}
+
+@keyframes title_show{
+    from{transform: scale(.2);}
+    to{transform: scale(1);}
+}
+
+main .title h1:hover{
+    font-size: 250%;
+}
+
+.title button{
+    width: 15%;
+    text-transform: capitalize;
+    background-color: rgba(139, 0, 0, 0);
+    font-weight: bold;
+    color: #000;
+    border: solid #000 1px;
+    border-radius: 22px;
+    padding: 5px;
+    box-shadow: 1px 2px 2px #000;
+}
+
+.title button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.lor{
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    overflow-x: hidden;
+    height: 40%;
+}
+
+.lor div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* start of ol animation */
+@keyframes a1{from{right: 120%;} to{right: 0%;}}
+.a1{position: relative; right: 120%; animation: a1 1s forwards 1s;}
+@keyframes a2{from{right: 120%;} to{right: 0%;}}
+.a2{position: relative; right: 120%; animation: a2 1s forwards 1.3s;}
+@keyframes a3{from{right: 120%;} to{right: 0%;}}
+.a3{position: relative; right: 120%; animation: a3 1s forwards 1.6s;}
+@keyframes a4{from{right: 120%;} to{right: 0%;}}
+.a4{position: relative; right: 120%; animation: a4 1s forwards 1.9s;}
+@keyframes b1{from{left: 120%;} to{left: 0%;}}
+.b1{position: relative; left: 120%; animation: b1 1s forwards 2.5s;}
+@keyframes b2{from{left: 120%;} to{left: 0%;}}
+.b2{position: relative; left: 120%; animation: b2 1s forwards 2.8s;}
+@keyframes b3{from{left: 120%;} to{left: 0%;}}
+.b3{position: relative; left: 120%; animation: b3 1s forwards 3.1s;}
+@keyframes b4{from{left: 120%;} to{left: 0%;}}
+.b4{position: relative; left: 120%; animation: b4 1s forwards 3.4s;}
+/* end of ol animation */
+
+header{
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    text-transform: capitalize;
+    color: var(--special-color);
+    height: 80%;
+    border-top: solid 1px;
+    padding-top: 20px;
+    overflow-x: hidden;
+    background-color: var(--special-color2);
+}
+
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header div h1{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 400px;
+    font-size: 40px;
+}
+
+header div h1:hover{
+    color: var(--nav-color);
+}
+
+header div img{
+    opacity: .9;
+    border-radius: 20px;
+    animation: hop 1s forwards ease-in;
+}
+
+@keyframes hop{
+from{transform: scale(0);}
+to{transform: scale(1);}
+}
+
+header .counter_lor{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+
+.counter_lor .lor3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+    font-weight: bolder;
+    left: 100%; ;
+    animation: coun_right 1s forwards 1s;
+}
+
+@keyframes coun_right{
+    from{left: 100%;}
+    to{left: 0%;}
+}
+
+header .counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    width: 45%;
+    height: 100%;
+    right: 100%;
+    animation: coun_left 1s forwards 1s;
+}
+
+@keyframes coun_left{
+    from{right: 100%;}
+    to{right: 0%;}
+}
+
+header .counter div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.counter div h2{
+    font-size: 40px;
+}
+
+.counter div h2:hover{
+    transform: scale(1.5);
+}
+
+.counter div h4{
+    color: #000;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+article{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110%;
+    text-transform: capitalize;
+    border-top: solid 1px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.article-parent{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 90%;
+    height: 100%;
+}
+
+.article-parent .courses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.courses .cours1-2{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    gap: 500px;
+    position: relative;
+    right: 100%;
+    bottom: 100%;
+    animation: corner1 1s forwards linear ;
+}
+
+@keyframes corner1{
+    from{right: 100%; bottom: 100%;}
+    to{right: 0%; bottom: 0%;}
+}
+
+.cours1-2 div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 22.5%;
+    text-align: center;
+}
+
+.article-parent h1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--special-color);
+    font-size: 40px;
+    height: 200%;
+}
+
+.article-parent h1:hover{
+    color: var(--nav-color);
+}
+
+.courses .cours3-4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 350px;
+    left: 100%;
+    top: 100%;
+    position: relative;
+    animation: corner2 1s forwards ease-in-out 1s ;
+}
+
+@keyframes corner2{
+    from{left: 100%; top: 100%;}
+    to{left: 0%; top: 0%;}
+}
+
+
+.cours3-4 div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 22.5%;
+    text-align: center;
+}
+
+article h3{
+    color: var(--nav-color);
+}
+
+article h3:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+aside{
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    text-transform: capitalize;
+    background-color: var(--special-color2);
+    border-top: solid 1px;
+    overflow-y: hidden;
+}
+
+aside h1{
+    display: flex;
+    align-items: flex-end;
+    height: 20%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--special-color);
+}
+
+aside h1:hover{
+    color: var(--nav-color);
+}
+
+aside span{
+    width: 0px;
+    border-top: solid 1px;
+    animation: spa_h1 1s forwards 1s;
+}
+
+@keyframes spa_h1{
+    from{width: 0px;}
+    to{width: 260px;}
+}
+
+.aside-parent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100%;
+}
+
+.aside-parent div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(140%);
+    animation: div_bottom 1s forwards 2;
+
+}
+
+@keyframes div_bottom{
+    from{transform: translateY(140%);}
+    to{transform: translateY(0%);}
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    height: 20%;
+    border-top: solid 1px;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div a{
+    text-decoration: none;
+    color: darkred;
+}
+
+@media (min-width:350px) and (max-width:800px){
+    nav{
+        height: 15%;
+    }
+    
+    .nav_parent{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .nav_parent div h2{
+        font-size:20px;
+    }
+
+    main .title{
+        position: relative;
+        top: 30%;
+    }
+    
+    main .title h1{
+        display: none;
+    }
+
+    main .title button{
+        width: 40%;
+    }
+
+    header div img{
+        width: 80%;
+        height: 90%;
+    }
+
+    header div h1{
+        font-size: 20px;
+        left: 50px;
+    }
+
+    .counter_lor{
+        flex-direction: column;
+    }
+
+    article{
+        flex-direction: column;
+        height: 300%;
+    } 
+
+    .article-parent{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .courses{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .courses .cours1-2{
+        flex-direction: column;
+        gap: 50px;
+        padding-left: 50px;
+    }
+    
+    .courses .cours3-4{
+        flex-direction: column;
+        gap: 50px;
+        padding-left: 50px;
+    }
+
+    aside{
+        height: 180%;
+    }
+
+    .aside-parent{
+        flex-direction: column;
+        overflow-y: auto;
+        justify-content: center;
+        height: 150%;
+        gap: 50px;
+    }
+
+}
